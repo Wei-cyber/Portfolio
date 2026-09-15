@@ -10,20 +10,6 @@ npm run dev
 ```
 
 Then open `http://localhost:3000`.
-
-## Replace before publishing
-
-Edit `app/page.tsx` and replace:
-
-- `hello@example.com`
-- `#` GitHub / LinkedIn / project links
-- `/resume.pdf` after adding your resume to `public/resume.pdf`
-- Any project descriptions as your projects evolve
-
-## Recommended deployment
-
-Vercel is the simplest option for this Next.js project.
-
 ## Design direction
 
 - Technical/editorial rather than flashy
