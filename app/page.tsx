@@ -2,44 +2,68 @@ const projects = [
   {
     number: "01",
     eyebrow: "FEATURED / ACTIVE",
-    title: "Agentic AI Platform",
+    title: "Enterprise AI Platform",
     description:
-      "A production-oriented AI workspace for agents that retrieve context, use tools, interact with external services, and execute multi-step workflows.",
-    stack: ["Python", "OpenAI API", "RAG", "Tool Calling", "Vector DB"],
+      "A production-oriented AI workspace for building agents that retrieve knowledge, use external tools, and execute evaluated, multi-step workflows.",
+    stack: [
+      "Python",
+      "FastAPI",
+      "React",
+      "OpenAI API",
+      "LangGraph",
+      "PostgreSQL/pgvector",
+    ],
     details: [
-      "Implemented the core tool loop for model → tool call → tool result → final response.",
-      "Added web search, page extraction, and document-upload backend capabilities.",
-      "Designing retrieval, evaluation, observability, and workflow execution as the next system layers.",
+      "Implemented agent tool-calling loops with bounded execution, source citations, and integrations for web search, Google Drive, and Gmail drafts.",
+      "Built document ingestion and hybrid semantic–keyword retrieval using local embeddings and PostgreSQL/pgvector.",
+      "Developed versioned workflows with automated evaluations, human-calibrated grading, and publication approval gates.",
+      "Added resilient background execution with Celery, Redis, checkpoint recovery, and real-time run monitoring.",
     ],
     status: "In active development",
-    href: "#",
+    href: "https://github.com/Wei-cyber/Sovereignty",
   },
   {
     number: "02",
-    eyebrow: "DATA ENGINEERING",
-    title: "Retail Sales Analytics Pipeline",
+    eyebrow: "FEATURED / ACTIVE",
+    title: "Agent-Native Collaboration Studio, motivated by OpenAI webMCP challenge",
     description:
-      "Cloud data pipeline that moves retail event data from ingestion through transformation, analytics modeling, and dashboard delivery.",
-    stack: ["Python", "Airflow", "BigQuery", "GCP", "Docker"],
+      "Local-first 3D modeling studio where one person and a WebMCP-capable browser agent can edit the same live scene",
+    stack: ["TypeScript", "React", "Three.js", "React Three Fiber", "WebMCP", "Zustand", "IndexedDB", "Vite", "Wrangler", "Playwright"],
     details: [
-      "Built ingestion from source data into Google Cloud Storage.",
-      "Orchestrated Python ETL jobs with Cloud Composer / Airflow.",
-      "Structured bronze, silver, and analytics layers in BigQuery for downstream analysis.",
+      "Registered structured WebMCP tools that let browser agents inspect scenes, find objects, and perform validated modeling operations.",
+      "Routed human and agent edits through the same command layer for autosave, activity history, conflict detection, and undo/redo.",
+      "Implemented parametric primitives, PBR materials, grouping, non-destructive Boolean operations, atomic multi-step transactions, and JSON/GLB import and export.",
+      "Added unit and browser tests covering scene commands, WebMCP registration, tool execution, cancellation, concurrent-edit rebasing, and interface regressions."
     ],
     status: "Completed project",
-    href: "#",
+    href: "https://github.com/Wei-cyber/SynMod",
   },
   {
     number: "03",
+    eyebrow: "DATA ENGINEERING",
+    title: "Amazon product intelligence",
+    description:
+      "Tracks Amazon product listings (price, search rank, reviews) over time",
+    stack: ["Python", "Airflow", "Dash", "Docker", "ETL"],
+    details: [
+      "Built an ETL platform that ingests product pricing and search-ranking data from external APIs via Airflow-scheduled workflows, with built-in data validation, and presents trends through an interactivedashboard supporting pricing analysis, competitive monitoring, and ranking-volatility detection",
+      "Implemented scheduled workflows using Airflow, API integration, data validation, and analytical visualizations",
+      "Containerized components with Docker for reproducible deployment and development.",
+    ],
+    status: "Completed project",
+    href: "https://github.com/Wei-cyber/productIntelligence",
+  },
+  {
+    number: "04",
     eyebrow: "ML / RESEARCH",
     title: "Remote Sensing & ML Research",
     description:
-      "Research engineering work on Python pipelines, LiDAR datasets, image segmentation, and understory vegetation mapping at York University.",
-    stack: ["Python", "PyTorch", "Computer Vision", "LiDAR"],
+      "Python data pipelines and TensorFlow-based image segmentation supporting remote sensing and vegetation mapping research at York University.",
+    stack: ["Python", "TensorFlow", "Image Segmentation", "Geospatial Data", "LiDAR"],
     details: [
-      "Prepared structured datasets from field measurements and LiDAR sources.",
-      "Supported segmentation experiments and model evaluation workflows.",
-      "Collaborated across geomatics, remote sensing, and forest ecology research.",
+      "Built end-to-end pipelines that transformed field measurements, geospatial data, and LiDAR datasets into structured machine-learning inputs.",
+      "Translated research objectives into image segmentation workflows, from dataset preparation to model evaluation and experimental analysis.",
+      "Worked with researchers and domain experts to resolve data-quality issues, document methods, and present findings.",
     ],
     status: "Research experience",
     href: "#experience",
@@ -48,7 +72,7 @@ const projects = [
 
 const skills = [
   ["Languages", "Python · SQL · C · JavaScript"],
-  ["AI / ML", "PyTorch · LLM APIs · RAG · Embeddings · Tool Calling"],
+  ["AI / ML", "TensorFlow · PyTorch · LLM APIs · RAG · Embeddings · Tool Calling"],
   ["Data / Cloud", "Airflow · BigQuery · GCP · PostgreSQL · Docker"],
   ["Engineering", "Git · REST APIs · Linux · x86-64 · Data Pipelines"],
 ];
@@ -72,7 +96,7 @@ export default function Home() {
     <main>
       <header className="site-header page-shell">
         <a className="brand" href="#top" aria-label="Back to top">
-          D / T
+          Junwei Quan
         </a>
 
         <nav className="nav" aria-label="Primary navigation">
@@ -174,7 +198,7 @@ export default function Home() {
                     </div>
 
                     <a className="project-link" href={project.href}>
-                      {project.number === "03" ? "View experience" : "Case study"}
+                      {project.number === "04" ? "View experience" : "Case study"}
                       <ArrowIcon />
                     </a>
                   </div>
@@ -200,6 +224,7 @@ export default function Home() {
         <div className="experience-card">
           <div className="experience-aside">
             <p>York University</p>
+            <p><span>Toronto, ON</span></p>
             <span>May 2024 — Apr 2025</span>
           </div>
 
@@ -213,17 +238,21 @@ export default function Home() {
 
             <div className="experience-points">
               <p>
-                Built Python pipelines for field measurements and LiDAR
-                datasets supporting machine-learning research in remote
-                sensing.
+                Translated research objectives into data-processing and
+                TensorFlow-based image segmentation workflows, including
+                dataset preparation, model evaluation, and analysis of
+                experimental results.
               </p>
               <p>
-                Prepared labeled and structured datasets for image
-                segmentation and understory vegetation mapping.
+                Built end-to-end Python pipelines to process field measurements,
+                geospatial data, and LiDAR datasets, producing structured inputs
+                for machine-learning research in remote sensing and vegetation
+                mapping.
               </p>
               <p>
-                Supported model evaluation, literature review, technical
-                reporting, and interdisciplinary research collaboration.
+                Collaborated with researchers and domain experts to resolve
+                data-quality issues, document methodologies, and communicate
+                findings through technical reports and presentations.
               </p>
             </div>
           </div>
@@ -311,7 +340,7 @@ export default function Home() {
       </section>
 
       <footer className="footer page-shell">
-        <span>© 2026 Junwei Quan</span>
+        <span>© 2026 JQ</span>
       </footer>
     </main>
   );
