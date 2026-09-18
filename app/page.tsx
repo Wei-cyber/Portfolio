@@ -25,7 +25,7 @@ const projects = [
   {
     number: "02",
     eyebrow: "FEATURED / ACTIVE",
-    title: "Agent-Native Collaboration Studio, motivated by OpenAI webMCP challenge",
+    title: "Agent-Native Collaboration Studio",
     description:
       "Local-first 3D modeling studio where one person and a WebMCP-capable browser agent can edit the same live scene",
     stack: ["TypeScript", "React", "Three.js", "React Three Fiber", "WebMCP", "Zustand", "IndexedDB", "Vite", "Wrangler", "Playwright"],
@@ -72,7 +72,7 @@ const projects = [
 
 const skills = [
   ["Languages", "Python · SQL · C · JavaScript"],
-  ["AI / ML", "TensorFlow · PyTorch · LLM APIs · RAG · Embeddings · Tool Calling"],
+  ["AI / ML", "TensorFlow · PyTorch · LLM APIs · RAG · Embeddings"],
   ["Data / Cloud", "Airflow · BigQuery · GCP · PostgreSQL · Docker"],
   ["Engineering", "Git · REST APIs · Linux · x86-64 · Data Pipelines"],
 ];
@@ -123,7 +123,7 @@ export default function Home() {
 
         <div className="hero-grid">
           <div>
-            <p className="section-label">SOFTWARE & AI ENGINEER</p>
+            <p className="section-label">Software & AI Builder</p>
             <h1>
               Building reliable
               <br />
@@ -163,10 +163,6 @@ export default function Home() {
             {/* <p className="section-label">SELECTED WORK</p> */}
             <h2>Projects</h2>
           </div>
-          {/* <p className="section-intro">
-            A focused selection spanning agentic AI, cloud data systems, and
-            machine-learning research.
-          </p> */}
         </div>
 
         <div className="projects">
@@ -213,52 +209,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section page-shell" id="experience">
-        <div className="section-heading-row">
-          <div>
-            <p className="section-label">EXPERIENCE</p>
-            <h2>Research engineering experience.</h2>
-          </div>
-        </div>
-
-        <div className="experience-card">
-          <div className="experience-aside">
-            <p>York University</p>
-            <p><span>Toronto, ON</span></p>
-            <span>May 2024 — Apr 2025</span>
-          </div>
-
-          <div className="experience-main">
-            <div>
-              <p className="role">Research Assistant</p>
-              <h3>
-                Machine learning, data pipelines, and remote sensing research.
-              </h3>
-            </div>
-
-            <div className="experience-points">
-              <p>
-                Translated research objectives into data-processing and
-                TensorFlow-based image segmentation workflows, including
-                dataset preparation, model evaluation, and analysis of
-                experimental results.
-              </p>
-              <p>
-                Built end-to-end Python pipelines to process field measurements,
-                geospatial data, and LiDAR datasets, producing structured inputs
-                for machine-learning research in remote sensing and vegetation
-                mapping.
-              </p>
-              <p>
-                Collaborated with researchers and domain experts to resolve
-                data-quality issues, document methodologies, and communicate
-                findings through technical reports and presentations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section page-shell" id="about">
         <div className="about-grid">
           <div>
@@ -284,23 +234,6 @@ export default function Home() {
               agents retrieve context, make decisions, use tools, execute
               reliably, and can be evaluated and observed.
             </p>
-          </div>
-        </div>
-
-        <div className="education-grid">
-          <div>
-            <p className="section-label">EDUCATION</p>
-          </div>
-
-          <div className="education-items">
-            <div>
-              <strong>B.Sc. (Hons), Computer Science</strong>
-              <span>York University · 2026</span>
-            </div>
-            <div>
-              <strong>B.Sc., Psychology</strong>
-              <span>York University</span>
-            </div>
           </div>
         </div>
 
