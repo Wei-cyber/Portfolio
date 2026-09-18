@@ -37,6 +37,10 @@ const projects = [
     ],
     status: "Completed project",
     href: "https://github.com/Wei-cyber/SynMod",
+    demo: {
+      embedUrl: "https://www.youtube-nocookie.com/embed/L7lu2ggAZJg",
+      watchUrl: "https://www.youtube.com/watch?v=L7lu2ggAZJg",
+    },
   },
   {
     number: "03",
@@ -200,6 +204,31 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              {project.demo && (
+                <div className="project-demo">
+                  <div className="project-demo-heading">
+                    <h4>Project demo</h4>
+                    <a
+                      className="text-link"
+                      href={project.demo.watchUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Watch on YouTube <ArrowIcon />
+                    </a>
+                  </div>
+                  <iframe
+                    className="project-demo-player"
+                    src={project.demo.embedUrl}
+                    title={`${project.title} demo video`}
+                    loading="lazy"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              )}
 
               <div className="project-status">
                 <span>{project.status}</span>

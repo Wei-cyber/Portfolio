@@ -315,6 +315,34 @@ h1 {
   white-space: nowrap;
 }
 
+.project-demo {
+  max-width: 960px;
+  margin: 36px auto 0;
+}
+
+.project-demo-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.project-demo-heading h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.project-demo-player {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: var(--dark);
+}
+
 .project-status {
   margin-top: 34px;
   padding-top: 20px;
