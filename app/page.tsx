@@ -160,13 +160,13 @@ export default function Home() {
       <section className="section page-shell" id="projects">
         <div className="section-heading-row">
           <div>
-            <p className="section-label">SELECTED WORK</p>
-            <h2>Projects that show how I build.</h2>
+            {/* <p className="section-label">SELECTED WORK</p> */}
+            <h2>Projects</h2>
           </div>
-          <p className="section-intro">
+          {/* <p className="section-intro">
             A focused selection spanning agentic AI, cloud data systems, and
             machine-learning research.
-          </p>
+          </p> */}
         </div>
 
         <div className="projects">
